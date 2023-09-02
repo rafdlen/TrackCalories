@@ -2,36 +2,89 @@
 //  CoreDataTests.swift
 //  TrackCaloriesTests
 //
-//  Created by Rafal on 31/08/2023.
+//  Created by Rafal on 02/09/2023.
 //
 
-import CoreData
 import XCTest
-@testable import 
+import CoreData
+@testable import TrackCalories
 
-final class CoreDataTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+class DataModelTests: XCTestCase {
+    
+    var testableDataContainer: PersistenceController!
+    var context: NSManagedObjectContext!
+    
+    override func setUp() {
+        super.setUp()
+        testableDataContainer = PersistenceController(inMemory: true)
+        context = testableDataContainer.container.viewContext
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    override func tearDown() {
+        super.tearDown()
+        testableDataContainer = nil
+        context = nil
+        
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func testCanAddMealToTheDataModel() throws {
+        PersistenceController.shared.addFood(name: "Apple", calories: 60, context: context)
+        
+        try context.save()
+        
+        let fetchRequest: NSFetchRequest<Food> = Food.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "name == %@", "Apple")
+        
+        let fetchedResults = try context.fetch(fetchRequest)
+        
+        if let firstResult = fetchedResults.first {
+            XCTAssertEqual(firstResult.name, "Apple")
+            XCTAssertEqual(firstResult.calories, 60)
         }
     }
+    
+    func testCanEditMealInTheDataModel() throws {
+        PersistenceController.shared.addFood(name: "Orange", calories: 50, context: context)
+        
+        try context.save()
+        
+        let fetchRequest: NSFetchRequest<Food> = Food.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "name == %@", "Orange")
+        
 
+        let foodToEdit = try context.fetch(fetchRequest)[0]
+        
+        PersistenceController.shared.editFood(food: foodToEdit, name: "Plum", calories: 160, context: context)
+        
+        let editedFetchRequest: NSFetchRequest<Food> = Food.fetchRequest()
+        editedFetchRequest.predicate = NSPredicate(format: "name == %@", "Plum")
+        
+        let editedFood = try context.fetch(editedFetchRequest)
+        
+        if let firstResult = editedFood.first {
+            XCTAssertEqual(firstResult.name, "Plum")
+            XCTAssertEqual(firstResult.calories, 160)
+        }
+    }
+    
+    func testCanRemoveMealFromTheDataModel() throws {
+        PersistenceController.shared.addFood(name: "Biscuits", calories: 600, context: context)
+        
+        try context.save()
+        
+        let fetchRequest: NSFetchRequest<Food> = Food.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "name == %@", "Biscuits")
+        
+        let foodToRemove = try context.fetch(fetchRequest)[0]
+        
+        context.delete(foodToRemove)
+        try context.save()
+   
+        let remainingFoods = try context.fetch(fetchRequest)
+
+        XCTAssertTrue(remainingFoods.isEmpty)
+    }
 }
+
+
+

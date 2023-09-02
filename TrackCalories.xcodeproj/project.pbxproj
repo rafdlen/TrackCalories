@@ -19,6 +19,7 @@
 		B501CB2A28ABDBB80057DA09 /* TimeFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B501CB2928ABDBB80057DA09 /* TimeFormatting.swift */; };
 		B501CB2C28ABDC040057DA09 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B501CB2B28ABDC040057DA09 /* DataController.swift */; };
 		B501CB2F28ABDC660057DA09 /* FoodModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B501CB2D28ABDC660057DA09 /* FoodModel.xcdatamodeld */; };
+		B57AE6792AA36BB900A78E6F /* CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57AE6782AA36BB900A78E6F /* CoreDataTests.swift */; };
 		B5CB38C528AD5D9000E2BBDD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CB38C428AD5D9000E2BBDD /* MainView.swift */; };
 		B5CB38C728AD64B800E2BBDD /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CB38C628AD64B800E2BBDD /* History.swift */; };
 /* End PBXBuildFile section */
@@ -56,6 +57,7 @@
 		B501CB2928ABDBB80057DA09 /* TimeFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatting.swift; sourceTree = "<group>"; };
 		B501CB2B28ABDC040057DA09 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		B501CB2E28ABDC660057DA09 /* Food.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Food.xcdatamodel; sourceTree = "<group>"; };
+		B57AE6782AA36BB900A78E6F /* CoreDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTests.swift; sourceTree = "<group>"; };
 		B5CB38C428AD5D9000E2BBDD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		B5CB38C628AD64B800E2BBDD /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				B501CB0C28ABDA800057DA09 /* TrackCaloriesTests.swift */,
+				B57AE6782AA36BB900A78E6F /* CoreDataTests.swift */,
 			);
 			path = TrackCaloriesTests;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B57AE6792AA36BB900A78E6F /* CoreDataTests.swift in Sources */,
 				B501CB0D28ABDA800057DA09 /* TrackCaloriesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
