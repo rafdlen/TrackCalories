@@ -43,9 +43,9 @@ struct History: View {
                                         })
                                     })
                         }
-                            }
-                    
                     }
+                    
+                }
                     }
                     .listStyle(.plain)
                 }
@@ -76,7 +76,7 @@ extension Food{
             dateFormatter.dateFormat = "dd.MM.yyyy"
             return dateFormatter.string(from: self.date!)
              
-        }else{
+        } else {
             return ""
         }
     }

@@ -38,7 +38,7 @@ struct MainView: View {
                                     Text("\(Int(food.calories))") + Text(" calories").foregroundColor(.red)
                                     }
                                     Spacer()
-                                    Text(calcTimeSince(date: food.date!))
+                                Text(food.date!.calcTimeSince())
                                         .foregroundColor(.gray)
                                         .italic()
                                 }
