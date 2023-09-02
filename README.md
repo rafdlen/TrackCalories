@@ -1,2 +1,24 @@
 # TrackCalories
-Calorie Tracker is a user-friendly app designed to help individuals monitor their daily calorie intake and manage their nutritional goals. Easily log meals, track your progress, and gain insights into your eating habits. Built to empower users in their journey towards a healthier lifestyle.
+
+## Description
+Calorie Tracker is an app designed to help users...
+
+## Installation
+1. Step 1...
+2. Step 2...
+
+## Usage
+Here's how you can use Calorie Tracker...
+
+![Screenshot](link-to-screenshot)
+
+## Contributing
+Please read [CONTRIBUTING.md](link-to-contributing-file) for details...
+
+## License
+This project is licensed under the MIT License - see the [LICENSE.md](link-to-license-file) file for details.
+
+## Acknowledgments
+* Thanks to...
+* Inspired by...
+
