@@ -8,14 +8,12 @@
 import SwiftUI
 
 @main
-struct SampleCoreDataApp: App {
+struct TrackCalories: App {
     let dataController = PersistenceController.shared
-
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext,
-                              dataController.container.viewContext)
+            WelcomeScreenView()
         }
     }
 }
