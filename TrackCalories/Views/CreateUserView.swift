@@ -15,6 +15,7 @@ struct CreateUserView: View {
     @State private var username: String = ""
     @State private var email: String = ""
     @State private var password: String = ""
+    @State private var has_profile: Bool = false
     @Environment(\.managedObjectContext) private var managedObjectContext
 
     var body: some View {
@@ -92,6 +93,7 @@ struct CreateUserView: View {
         let newUser = User(context: managedObjectContext)
         newUser.username = username
         newUser.email = email
+        newUser.has_profile = has_profile
         
         // Save to Core Data
         do {

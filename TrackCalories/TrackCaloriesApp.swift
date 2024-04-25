@@ -14,6 +14,8 @@ struct TrackCalories: App {
     var body: some Scene {
         WindowGroup {
             WelcomeScreenView()
+                .environment(\.managedObjectContext, dataController.container.viewContext)
+
         }
     }
 }

@@ -53,6 +53,13 @@ struct WelcomeScreenView: View {
                 }
                 .padding(.horizontal, 24)
                 
+                NavigationLink(destination: CreateProfileView()) {
+                    Text("Create Profile view")
+                }
+                NavigationLink(destination: ProfileListView()) {
+                    Text("Profile list view")
+                }
+                
                 Spacer()
             }
             .padding()
@@ -62,3 +69,7 @@ struct WelcomeScreenView: View {
         }
     }
 }
+
+
+
+
