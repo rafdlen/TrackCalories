@@ -60,6 +60,10 @@ struct WelcomeScreenView: View {
                     Text("Profile list view")
                 }
                 
+                NavigationLink(destination: SurveyView()) {
+                    Text("SurveyView")
+                }
+                
                 Spacer()
             }
             .padding()
