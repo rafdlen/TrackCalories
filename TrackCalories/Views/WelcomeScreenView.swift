@@ -64,6 +64,10 @@ struct WelcomeScreenView: View {
                     Text("SurveyView")
                 }
                 
+                NavigationLink(destination: DashboardView(viewModel: DashboardViewModel(context: PersistenceController.shared.container.viewContext))) {
+                    Text("Dashboard")
+                }
+                
                 Spacer()
             }
             .padding()
