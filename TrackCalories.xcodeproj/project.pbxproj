@@ -34,6 +34,8 @@
 		B57AE6792AA36BB900A78E6F /* CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57AE6782AA36BB900A78E6F /* CoreDataTests.swift */; };
 		B5CB38C528AD5D9000E2BBDD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CB38C428AD5D9000E2BBDD /* MainView.swift */; };
 		B5CB38C728AD64B800E2BBDD /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CB38C628AD64B800E2BBDD /* History.swift */; };
+		B5F0B66E2BF641DB00B5E744 /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F0B66D2BF641DB00B5E744 /* InitialView.swift */; };
+		B5F0B6702BF6BF8800B5E744 /* FitnessPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F0B66F2BF6BF8800B5E744 /* FitnessPlanView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		B57AE6782AA36BB900A78E6F /* CoreDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTests.swift; sourceTree = "<group>"; };
 		B5CB38C428AD5D9000E2BBDD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		B5CB38C628AD64B800E2BBDD /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		B5F0B66D2BF641DB00B5E744 /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
+		B5F0B66F2BF6BF8800B5E744 /* FitnessPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessPlanView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +210,8 @@
 				B5725C7B2BD9ADC700605D2E /* ProfileDetailView.swift */,
 				B560B43C2BE405AC001B9420 /* SurveyView.swift */,
 				B51C71FF2BEC1A4600727EBF /* DashboardView.swift */,
+				B5F0B66D2BF641DB00B5E744 /* InitialView.swift */,
+				B5F0B66F2BF6BF8800B5E744 /* FitnessPlanView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -359,9 +365,11 @@
 				B501CB2C28ABDC040057DA09 /* DataController.swift in Sources */,
 				B50CF9942BD1830100BFAE1B /* LoginView.swift in Sources */,
 				B501CAFE28ABDA7F0057DA09 /* ContentView.swift in Sources */,
+				B5F0B66E2BF641DB00B5E744 /* InitialView.swift in Sources */,
 				B5725C7A2BD9AD8100605D2E /* ProfileListView.swift in Sources */,
 				B501CAFC28ABDA7F0057DA09 /* TrackCaloriesApp.swift in Sources */,
 				B501CB2828ABDB7B0057DA09 /* EditFoodView.swift in Sources */,
+				B5F0B6702BF6BF8800B5E744 /* FitnessPlanView.swift in Sources */,
 				B50CF9B02BD1AE6F00BFAE1B /* LoggedSuccessfullyView.swift in Sources */,
 				B50CF9A82BD1A19800BFAE1B /* Model.xcdatamodeld in Sources */,
 				B51C72002BEC1A4600727EBF /* DashboardView.swift in Sources */,
